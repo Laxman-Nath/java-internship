@@ -1,0 +1,63 @@
+package com.Products.ServiceImpl;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.Products.Models.Product;
+import com.Products.Repositry.ProductRepositry;
+import com.Products.Service.ProductService;
+
+public class ProductServiceImpl implements ProductService {
+     static Connection conn=ProductRepositry.getConnection();
+     boolean status;
+	@Override
+	public void addProduct(Product product) {
+		try {
+	  Statement stm=conn.createStatement();
+	  String name=product.getName();
+	  String company=product.getCompany();
+	  Date manufacturedDate =Date.valueOf(product.getManufacturedDate());
+	  Date expiryDate=Date.valueOf(product.getExpiryDate());
+	  String sql="insert into product(name,company,manufacturedDate,expiryDate) values('name','addres',"+manufacturedDate+","+expiryDate+")";
+//	  String sql="insert into product(name,company,manufacturedDate,expiryDate) values('product.getName()','product.getCompany()',"+Date.valueOf(product.getManufacturedDate())+","+Date.valueOf(product.getExpiryDate())+")";
+	   status=stm.execute(sql);
+		}
+		catch(SQLException e) {
+			System.out.println(e);
+		}
+		if(status) {
+		System.out.println("Product was added successfully!");
+		}
+		else {
+			System.out.println("Error inserting record!");
+		}
+		
+	}
+
+	@Override
+	public void deleteProduct(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateProduct(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getAllProduct(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getProductById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+   
+}

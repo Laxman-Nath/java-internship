@@ -1,0 +1,82 @@
+package com.Products.ServiceImpl;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.Products.Models.Product;
+import com.Products.Repositry.ProductRepositry;
+import com.Products.Service.ProductService;
+
+public class ProductServiceImpl implements ProductService {
+	static Connection conn = ProductRepositry.getConnection();
+	boolean status;
+
+	@Override
+	public void addProduct(Product product) {
+		try {
+	
+	  String sql="insert into product(name,company,manufacturedDate,expiryDate) "
+	  		+ "values('"+product.getName()+"','"+product.getCompany()+"','"+product.getManufacturedDate()+
+	  		"','"+product.getExpiryDate()+"',')";
+
+		}
+		catch(SQLException e) {
+			System.out.println(e);
+		}
+		if(status) {
+		System.out.println("Product was added successfully!");
+		}
+		else {
+			System.out.println("Error inserting record!");
+		}
+		
+	}
+	
+//	public void addProduct(Product product) {
+//		String sql = "INSERT INTO product(name, company, manufacturedDate, expiryDate) VALUES (?, ?, ?, ?)";
+//		try (PreparedStatement stm = conn.prepareStatement(sql)) {
+//			stm.setString(1, product.getName());
+//			stm.setString(2, product.getCompany());
+//			stm.setDate(3, Date.valueOf(product.getManufacturedDate()));
+//			stm.setDate(4, Date.valueOf(product.getExpiryDate()));
+//
+//			int rowsInserted = stm.executeUpdate();
+//
+//			if (rowsInserted > 0) {
+//				System.out.println("Product was added successfully!");
+//			} else {
+//				System.out.println("Error inserting record!");
+//			}
+//		} catch (SQLException e) {
+//			System.out.println("Database error: " + e.getMessage());
+//		}
+//	}
+
+	@Override
+	public void deleteProduct(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateProduct(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void getAllProduct(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void getProductById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

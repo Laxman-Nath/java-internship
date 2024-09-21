@@ -1,0 +1,20 @@
+package com.di.annotations;
+
+public class College {
+	private String name;
+	private String address;
+	private int noOfStudents;
+     
+	public College(String name, String address, int noOfStudents) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.noOfStudents = noOfStudents;
+	}
+
+	public void printData() {
+		System.out.println("Name=" + this.name);
+		System.out.println("Address=" + this.address);
+		System.out.println("No of students=" + this.noOfStudents);
+	}
+}

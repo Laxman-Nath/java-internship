@@ -1,0 +1,11 @@
+package com.Products.Service;
+
+import com.Products.Models.Product;
+
+public interface ProductService {
+void addProduct(Product product);
+void deleteProduct(int id);
+void updateProduct(int id);
+void getAllProduct(int id);
+void getProductById(int id);
+}

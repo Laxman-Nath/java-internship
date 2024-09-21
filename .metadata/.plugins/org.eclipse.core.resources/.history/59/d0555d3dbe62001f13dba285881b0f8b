@@ -1,0 +1,5 @@
+package InnerClass.NonStatic;
+
+public class NonStaticInnerDemo {
+
+}

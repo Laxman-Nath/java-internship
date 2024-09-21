@@ -1,0 +1,27 @@
+package com.Products.Views;
+
+import java.time.LocalDate;
+
+import com.Products.Models.Product;
+import com.Products.ServiceImpl.ProductServiceImpl;
+
+public class ProductMain {
+	static ProductServiceImpl productService = new ProductServiceImpl();
+
+	public static void main(String[] args) {
+//      addProduct();
+//		deleteProduct();
+	}
+
+	public static void addProduct() {
+      Product p=new Product();
+      p.setName("ToothPaste");
+      p.setCompany("patanjali");
+      p.setManufacturedDate(LocalDate.now());
+      p.setExpiryDate(LocalDate.now().plusYears(10));
+      productService.addProduct(p);
+	}
+	public static void deleteProduct() {
+		productService.deleteProduct(8);
+	}
+}

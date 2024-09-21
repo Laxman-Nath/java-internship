@@ -1,0 +1,7 @@
+package Collections.Set.classwork;
+
+public class Dog {
+private String name;
+private String address;
+private String color;
+}

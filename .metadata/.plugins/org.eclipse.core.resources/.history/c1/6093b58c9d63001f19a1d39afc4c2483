@@ -1,0 +1,17 @@
+package Collections.Map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapPractice {
+  public static void main(String [] args) {
+	  Map<String ,String > names=new HashMap<>();
+	  names.put("laxman","mnr");
+	  names.put("roshan","daijee");
+	  names.put("pradeep","aithpur");
+	  names.put("rohit","chaumala");
+	  
+	  for(String key:names.keySet()) {
+	  }
+  }
+}

@@ -1,0 +1,25 @@
+package com.hibernate.models;
+
+import javax.persistence.OneToOne;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class MappingTest {
+	public static void main(String[] args) {
+      onetoone();
+	}
+
+	public static void onetoone() {
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session session = sf.getCurrentSession();
+		session.beginTransaction();
+         
+		Address address=new Address("nepal","sudurpaschim","mahendranagar");
+		Employee employee=new Employee("Laxman",23,address);
+		session.save(employee);
+		session.save(address);
+		session.getTransaction().commit();
+	}
+}

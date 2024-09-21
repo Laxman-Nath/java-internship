@@ -1,0 +1,12 @@
+package com.database;
+
+public class Db {
+public static Connection getConn() {
+	try {
+		
+	}
+	catch(Exception e) {
+		System.out.println(e);
+	}
+}
+}

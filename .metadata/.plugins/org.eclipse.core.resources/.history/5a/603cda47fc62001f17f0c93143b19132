@@ -1,0 +1,21 @@
+package Collections.Set;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.Set;
+public class SetDemo {
+public static void main(String [] args) {
+//	Set<Integer> set=new HashSet<>();
+//	Set<Integer> set=new LinkedHashSet<>();
+	Set<Integer> set=new TreeHashSet<>();
+	
+	set.add(23);
+	set.add(24);
+	set.add(25);
+	Iterator<Integer> iterator=set.iterator();
+	while(iterator.hasNext()) {
+		System.out.println(iterator.next());
+	}
+}
+
+}

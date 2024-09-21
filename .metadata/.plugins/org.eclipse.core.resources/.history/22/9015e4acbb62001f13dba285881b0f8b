@@ -1,0 +1,6 @@
+package Abstraction.AbstractClass;
+
+public abstract class Vehicle {
+    
+    
+}

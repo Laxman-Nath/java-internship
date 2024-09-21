@@ -1,0 +1,63 @@
+package com.hibernate.models;
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class MappingTest {
+	public static void main(String[] args) {
+//      onetoone();
+		onetomany();
+	}
+
+	public static void onetoone() {
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session session = sf.getCurrentSession();
+		session.beginTransaction();
+
+		Address address = new Address("nepal", "sudurpaschim", "mahendranagar");
+		Employee employee = new Employee();
+		employee.setName("Laxman");
+		employee.setAge(23);
+		employee.setAddress(address);
+		session.save(employee);
+		session.save(address);
+		session.getTransaction().commit();
+	}
+
+	public static void onetomany() {
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session session = sf.getCurrentSession();
+		session.beginTransaction();
+
+		Address address = new Address("nepal", "sudurpaschim", "mahendranagar");
+		session.save(address);
+		
+		Employee employee = new Employee();
+		List<Phone> phones = new ArrayList<>();
+        employee.setName("Laxman");
+		employee.setAge(23);
+		employee.setAddress(address);
+		
+		Phone phone1 = new Phone("ntc", 984737924, employee);
+		Phone phone2 = new Phone("ncell", 980974853, employee);
+		session.save(phone1);
+		session.save(phone2);
+		
+		phones.add(phone1);
+		phones.add(phone2);
+		employee.setPhone(phones);
+		
+		
+	
+		session.save(employee);
+		
+		session.getTransaction().commit();
+//		session.close();
+	}
+}

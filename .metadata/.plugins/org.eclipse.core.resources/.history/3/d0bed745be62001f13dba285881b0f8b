@@ -1,0 +1,14 @@
+package InnerClass.NonStatic;
+
+ class House{
+	 class Room{
+		  int height;
+		  int width;
+		  public void show() {
+			  System.out.println(height+","+width);
+		  }
+	 }
+}
+public class NonStaticInnerDemo {
+
+}

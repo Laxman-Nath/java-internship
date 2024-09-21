@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;springbootmvc/src/main/resources/templates/profile.html&apos; to &apos;home.html&apos;" description="Rename resource &apos;profile.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/templates/profile.html" name="home.html" stamp="1726826045262" updateReferences="true"/>
+</session>

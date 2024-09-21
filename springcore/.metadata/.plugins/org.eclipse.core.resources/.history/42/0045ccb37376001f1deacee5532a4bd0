@@ -1,0 +1,10 @@
+package com.di.annotations;
+
+import org.apache.catalina.core.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class AnnotationsTest {
+	public static void main(String[] args) {
+       ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.java);
+	}
+}

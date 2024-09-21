@@ -1,0 +1,11 @@
+package Abstraction.AbstractClass;
+
+public class AbstractDemo {
+abstract class Vehicle{
+    abstract void getNumber();
+    abstract void getPrice();
+    void getCompany() {
+    	System.out.println("TATA");
+    }
+}
+}

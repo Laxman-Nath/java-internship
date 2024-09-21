@@ -1,0 +1,18 @@
+package com.hibernate.models;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="student")
+public class Student {
+@Column
+private int id;
+@Column
+private String name;
+@Column
+private String address;
+@Column
+private long phone;
+}

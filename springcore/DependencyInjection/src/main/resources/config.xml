@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.di.models.Student" id="st1">
+		<constructor-arg value="12" />
+		<constructor-arg value="laxman" />
+		<constructor-arg value="mnr" />
+	</bean>
+	<bean class="com.di.models.Student" id="st2">
+		<property name="id" value="20"></property>
+		<property name="name" value="rohit"></property>
+		<property name="address" value="dhangadi"></property>
+
+	</bean>
+	<bean class="com.di.models.Car" id="c1">
+		<constructor-arg value="red" />
+		<constructor-arg value="tata" />
+		
+	</bean>
+	<bean class="com.di.models.Car" id="c2">
+		<property name="color" value="blue"></property>
+		<property name="company" value="suzuki"></property>
+		
+
+	</bean>
+	
+	<bean class="com.di.models.Employee" id="emp1">
+		<constructor-arg value="300" />
+		<constructor-arg value="bikash" />
+		<constructor-arg value="mnr" />
+		<constructor-arg ref="c1"/>
+	</bean>
+	<bean class="com.di.models.Employee" id="emp2">
+		<property name="id" value="400"></property>
+		<property name="name" value="harish"></property>
+		<property name="address" value="belauri"></property>
+		<property name="car" ref="c2"></property>
+
+	</bean>
+
+</beans>

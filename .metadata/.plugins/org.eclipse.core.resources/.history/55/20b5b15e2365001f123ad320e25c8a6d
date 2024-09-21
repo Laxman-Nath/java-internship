@@ -1,0 +1,21 @@
+package com.db;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class TestDb {
+public static void main(String [] args) throws ClassNotFoundException, SQLException {
+	// Register driver
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	DriverManager.getConnection("jdbc:mysql//localhost:3306/test_db","root","siddha@123");
+	
+	
+	// Transaction
+	// -------------------- insert sql --------------------
+	// a. write sql
+	   String sql="Insert into user(username,password) values('ram','999')";
+	// b. create statements
+	// c. execute sql
+	// d. close db
+}
+}

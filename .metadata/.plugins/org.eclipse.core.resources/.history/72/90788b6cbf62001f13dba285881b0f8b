@@ -1,0 +1,14 @@
+package InnerClass.Anynomous;
+
+@FunctionalInterface
+interface Vehicle{
+	int getNumber();
+}
+public class AnynomousDemo {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

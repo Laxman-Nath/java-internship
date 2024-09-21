@@ -1,0 +1,15 @@
+package Collections.Set.classwork;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+public static void main(String [] args) {
+	Set<Dog> dogs=new HashSet<>();
+	dogs.add(new Dog("tommy","mnr","white"));
+	dogs.add(new Dog("sanu","dhangadi","white"));
+	dogs.add(new Dog("tommy","mnr","white"));
+	dogs.add(new Dog("sanu","dhangadi","white"));
+	dogs.add(new Dog("sanu","dhangadi","white"));
+}
+}

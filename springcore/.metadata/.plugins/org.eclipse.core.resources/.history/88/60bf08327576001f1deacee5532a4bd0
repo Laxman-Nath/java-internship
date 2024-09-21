@@ -1,0 +1,11 @@
+package com.di.annotations;
+
+public class EnglishTeacher implements Teacher {
+
+	@Override
+	public void teaching() {
+		System.out.println("Teaching english.........");
+		
+	}
+
+}

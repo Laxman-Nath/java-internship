@@ -1,0 +1,10 @@
+package com.di.annotations;
+
+public class Student {
+
+	public void printData() {
+		System.out.println("Name="+"laxman");
+		System.out.println("Address="+"mahendranagar");
+		
+	}
+}

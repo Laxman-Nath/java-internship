@@ -1,0 +1,8 @@
+package com.hibernate.models;
+
+public class Address {
+private int id;
+private String country;
+private String state;
+private String city;
+}
