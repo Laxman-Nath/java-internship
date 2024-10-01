@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Upload photo</title>
+</head>
+<body style="background-image: url('/img/login.jpg')">
+	<th:block th:replace="navbar"></th:block>
+	<div class="container-fluid" style="margin-top: 180px;">
+		<div class="row">
+			<div class="col-md-6 offset-md-3 ">
+				<div class="card">
+					<div class="card-header text-center bg-primary text-white">
+						<h2>Upload photo</h2>
+						<h2 class="text-white">[[${error}]]</h2>
+						<h2 class="text-white">[[${success}]]</h2>
+
+					</div>
+					<div class="card-body text-center">
+						<form action="/upload" method="post" enctype="multipart/form-data">
+							<div class="mb-2">
+								<label class="form-label">Upload image</label> <input
+									type="file" name="image" class="form-control">
+							</div>
+
+
+
+							<div class="mb-2">
+								<button type="submit" class="btn btn-primary w-100">Upload</button>
+							</div>
+						</form>
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

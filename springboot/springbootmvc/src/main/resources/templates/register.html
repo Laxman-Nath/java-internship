@@ -24,6 +24,7 @@
 				<div class="card">
 					<div class="card-header text-center bg-success text-white">
 						<h2>Registration form</h2>
+						<h2 class="text-white">[[${duplicate}]]</h2>
 					</div>
 					<div class="card-body text-center">
 						<form action="/register" method="post">
@@ -56,14 +57,14 @@
 								<input type="checkbox" name="hobbies" value="eating"
 									class="form-check-label"><label class="">Eating</label>
 							</div>
-							
+
 							<div class="mb-2">
-							   	<label class="form-label">Gender</label><br> <input
-									type="radio" name="gender" class="form-check-input" 
-									value="m"><label class="form-check-label">Male
-								</label> <input type="radio" name="gender" value="female" class="form-check-label"><label
-									class="">Female</label> <input type="radio" name="gender" value="other"
-									class="form-check-label"><label class="">Other</label>
+								<label class="form-label">Gender</label><br> <input
+									type="radio" name="gender" class="form-check-input" value="m"><label
+									class="form-check-label">Male </label> <input type="radio"
+									name="gender" value="female" class="form-check-label"><label
+									class="">Female</label> <input type="radio" name="gender"
+									value="other" class="form-check-label"><label class="">Other</label>
 							</div>
 							<div class="mb-2">
 								<button type="submit" class="btn btn-danger">Register</button>
